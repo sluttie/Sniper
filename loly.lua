@@ -177,13 +177,8 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
                 if string.find(item, "Huge") and unitGems <= 10 then
                     coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
                     return
-		elseif string.find(item, "Charm") and unitGems <= 1 then
-                    coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
-                    return
-                elseif snipeNormalPets == true and gems == 1 then
-                        snipeNormal = false
-		        coroutine.wrap(tryPurchase)(uid, gems, item, version, siny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
-                        return
+		
+              
                 elseif class == "Pet" then
                     local type = Library.Directory.Pets[item]
                     if type.exclusiveLevel and unitGems <= 1 and item ~= "Banana" and item ~= "Coin" then
