@@ -181,7 +181,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
                     coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
                     return
                 elseif snipeNormalPets == true and gems == 1 then
-                        snipeNormal = true
+                        snipeNormal = false
 		        coroutine.wrap(tryPurchase)(uid, gems, item, version, siny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
                         return
                 elseif class == "Pet" then
@@ -192,7 +192,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
                     elseif type.titanic and unitGems <= 1000000000 then
 			coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
                         return
-                    elseif type.huge and unitGems <= 1 then
+                    elseif type.huge and unitGems <= 10 then
 			coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
                         return
 		    end
